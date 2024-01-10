@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon/planet-earth-geography-svgrepo-com.svg" type="svg+xml">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <title>My Travel Website</title>
+  </head>
+  <body link="#000000" vlink="#000000">
+    <div class="container">
+      <header>
+        <div class="menu">
+          <div class="menu__logo"><img src="./img/favicon/planet-earth-geography-svgrepo-com.svg">ИнлайнТур</div>
+          <div class="menu__info">
+            <div><a class="menu__link" href="../../index.html">Главная</a>
+            </div>
+            <div><a class="menu__link" href="#">О нас</a>
+            </div>
+            <div><a class="menu__link" href="#">Контакты</a>
+            </div>
+            <div><a class="menu__link" href="../../info.html">Инфо</a>
+            </div>
+            <div><a class="menu__link" href="#">Другое</a>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </header>
+      <h2>
+         Туристический рейтинг зарубежных стран</h2>
+      <div class="forma">
+        <div class="forma_graph"> 
+          <details> 
+            <summary class="forma_graph__title">График</summary>
+            <form>
+              <p>
+                 Значение ОХ:
+                <div class="radio_group">
+                  <label class="radio_label">
+                    <input class="radio_input" type="radio" name="graph" value="tourists"/><span class="radio_text">Число туристов</span>
+                  </label>
+                </div>
+                <div class="radio_group">
+                  <label class="radio_label">
+                    <input class="radio_input" type="radio" name="graph" value="tourists"/><span class="radio_text">Туристическая инфраструктура</span>
+                  </label>
+                </div>
+                <div class="radio_group">
+                  <label class="radio_label">
+                    <input class="radio_input" type="radio" name="graph" value="tourists"/><span class="radio_text">Уровень сервиса</span>
+                  </label>
+                </div>
+              </p>
+              <p>
+                 Результаты 
+                <div class="checkbox_group">
+                  <label class="checkbox_label">
+                    <input class="checkbox_input" type="checkbox" name="graph" value="minhp"/><span class="checkbox_text">Максимальный индекс туристической привлекательности</span>
+                  </label>
+                </div>
+                <div class="checkbox_group">
+                  <label class="checkbox_label">
+                    <input class="checkbox_input" type="checkbox" name="graph" value="heroesamount"/><span class="checkbox_text">Минимальный индекс туристической привлекательности</span>
+                  </label>
+                </div>
+                <div class="checkbox_group">
+                  <label class="checkbox_label">
+                    <input class="checkbox_input" type="checkbox" name="graph" value="minmana"/><span class="checkbox_text">Количество стран</span>
+                  </label>
+                </div>
+              </p>
+              <p>
+                <button class="forma_graph__btn" type="button">Построить</button>
+                <button class="forma_graph__btn" type="reset">Сбросить настройки   </button>
+              </p>
+            </form>
+          </details>
+        </div>
+        <div class="forma_filtr"> 
+          <details> 
+            <summary class="forma_filtr__title">
+               Фильтр</summary>
+            <form>
+              <p>
+                <label class="forma_filtr__label">Страна:
+                  <input class="forma_filtr__input" type="text"/>
+                </label><br/>
+                <label class="forma_filtr__label">Численность туристов:
+                  <input class="forma_filtr__input" type="number" min="100000" max="999999999"/>
+                </label><br/>
+                <label class="forma_filtr__label">Безопасность:от
+                  <input class="forma_filtr__input" type="number" min="0" max="10"/>до
+                  <input class="forma_filtr__input" type="number" min="0" max="10"/>
+                </label><br/>
+                <label class="forma_filtr__label">Транспорт:от
+                  <input class="forma_filtr__input" type="number" min="0" max="10"/>до
+                  <input class="forma_filtr__input" type="number" min="0" max="10"/>
+                </label><br/>
+                <label class="forma_filtr__label">Доступность цен:от
+                  <input class="forma_filtr__input" type="number" min="0" max="10"/>до
+                  <input class="forma_filtr__input" type="number" min="0" max="10"/>
+                </label><br/>
+                <label class="forma_filtr__label">Уровень сервиса:от
+                  <input class="forma_filtr__input" type="number" min="0" max="10"/>до
+                  <input class="forma_filtr__input" type="number" min="0" max="10"/>
+                </label><br/>
+                <label class="forma_filtr__label">Число отелей:от
+                  <input class="forma_filtr__input" type="number" min="0" max="10"/>до
+                  <input class="forma_filtr__input" type="number" min="0" max="10"/>
+                </label><br/>
+              </p>
+              <p>
+                <input class="forma_filtr__button" type="button" value="Найти">
+                <input class="forma_filtr__button" type="reset" value="Сбросить фильтр">
+              </p>
+            </form>
+          </details>
+        </div>
+        <div class="forma_sort">
+          <details> 
+            <summary class="forma_filtr__sort">Сортировка</summary>
+            <form>
+              <p><strong>Первый уровень:</strong>
+                <select class="forma_sort__select" name="sort-level-Первый уровень:">
+                  <option>Страна</option>
+                  <option>Численность туристов</option>
+                  <option>Доступность цен</option>
+                  <option>Транспорт</option>
+                  <option>Безопасность</option>
+                  <option>Итоговый индекс туристическая привлекательность</option>
+                  <option>Туристическая инфраструктура</option>
+                  <option>Уровень сервиса</option>
+                </select>
+                <select class="forma_sort__select" name="sort-direction-Первый уровень:">
+                  <option>По возрастанию</option>
+                  <option>По убыванию</option>
+                </select>
+              </p>
+              <p><strong>Второй уровень:</strong>
+                <select class="forma_sort__select" name="sort-level-Второй уровень:">
+                  <option>Страна</option>
+                  <option>Численность туристов</option>
+                  <option>Доступность цен</option>
+                  <option>Транспорт</option>
+                  <option>Безопасность</option>
+                  <option>Итоговый индекс туристическая привлекательность</option>
+                  <option>Туристическая инфраструктура</option>
+                  <option>Уровень сервиса</option>
+                </select>
+                <select class="forma_sort__select" name="sort-direction-Второй уровень:">
+                  <option>По возрастанию</option>
+                  <option>По убыванию</option>
+                </select>
+              </p>
+              <p><strong>Третий уровень:</strong>
+                <select class="forma_sort__select" name="sort-level-Третий уровень:">
+                  <option>Страна</option>
+                  <option>Численность туристов</option>
+                  <option>Доступность цен</option>
+                  <option>Транспорт</option>
+                  <option>Безопасность</option>
+                  <option>Итоговый индекс туристическая привлекательность</option>
+                  <option>Туристическая инфраструктура</option>
+                  <option>Уровень сервиса</option>
+                </select>
+                <select class="forma_sort__select" name="sort-direction-Третий уровень:">
+                  <option>По возрастанию</option>
+                  <option>По убыванию</option>
+                </select>
+              </p>
+              <p>
+                <input class="forma_sort__button" type="button" value="Сортировать">
+                <input class="forma_sort__button" type="reset" value="Сбросить настройки">
+              </p>
+            </form>
+          </details>
+        </div>
+        <div class="list_table"> 
+          <table class="table" align="center" border="2" cellspacing="0" cellpadding="5px" style="margin:auto;">
+            <thead> 
+              <tr> 
+                <th>Страна</th>
+                <th>Численность туристов (за год)</th>
+                <th>Число культурных объектов</th>
+                <th>Доступность цен</th>
+                <th>Транспорт</th>
+                <th>Безопасность</th>
+                <th>Итоговый индекс туристическая привлекательность</th>
+                <th>Уровень сервиса</th>
+                <th>Туристическая инфраструктура</th>
+              </tr>
+            </thead>
+            <tbody> 
+              <tr>
+                <td>Албания</td>
+                <td>123 000</td>
+                <td>33</td>
+                <td>9.5</td>
+                <td>6.1</td>
+                <td>8</td>
+                <td>8.632</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Китай</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Вьетнам</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Сингапур	</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Корея</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Турция</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Алжир</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Казахстан</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Сирия</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Туркменистан</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Россия</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Беларусь</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Эстония	</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Литва</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Швейцария</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>ОАЭ</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Кипр</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Индонезия</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Алжир</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Мароко</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Египет</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Нигерия</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Швеция</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Швеция</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Швеция</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+              <tr>
+                <td>Швеция</td>
+                <td>236 100</td>
+                <td>57</td>
+                <td>6.1</td>
+                <td>4.2</td>
+                <td>9</td>
+                <td>8.59</td>
+                <td>8.632</td>
+                <td>8.632</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer>
+        <p>© 2023 My Travel Website.  Моисеев Дмитрий. Все права защищены.</p>
+      </footer>
+    </div>
+  </body>
+</html>

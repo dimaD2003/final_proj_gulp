@@ -1,0 +1,15 @@
+extends layout/template
+block variables 
+	- var name = 'Моисеев Дмитрий'
+
+block content
+	.contant
+		block partners
+			h3 
+				|Наши партнеры
+			include layout/components/contant_partners.pug
+			
+		block top_item 
+			h3 
+				|Популярные направления
+			include layout/components/top_items.pug

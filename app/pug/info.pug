@@ -1,0 +1,118 @@
+extends layout/template
+include layout/mixins
+
+
+
+   
+
+block variables 
+    - var name = 'Моисеев Дмитрий'
+    - var graghVarX1 = 'Число туристов'
+    - var graghVarX2 = 'Туристическая инфраструктура'
+    - var graghVarX3 = 'Уровень сервиса'
+    - var graghVarY1 = 'Максимальный индекс туристической привлекательности'
+    - var graghVarY2 = 'Минимальный индекс туристической привлекательности'
+    - var graghVarY3 = 'Количество стран'
+    - 
+        var infoCountries = [
+                            { name: "Албания", tourists: "123 000", culturalObjects: 33, priceAccessibility: 9.5, transport: 6.1, safety: 8, attractivenessIndex: 8.632, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Китай", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Вьетнам", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Сингапур	", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Корея", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Турция", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Алжир", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Казахстан", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Сирия", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Туркменистан", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Россия", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Беларусь", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Эстония	", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Литва", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Швейцария", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "ОАЭ", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Кипр", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Индонезия", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Алжир", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Мароко", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Египет", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Нигерия", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Швеция", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Швеция", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Швеция", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 },
+                            { name: "Швеция", tourists: "236 100", culturalObjects: 57, priceAccessibility: 6.1, transport: 4.2, safety: 9, attractivenessIndex: 8.590, serviceLevel: 8.632, infrastructure: 8.632 }]
+block content
+    h2 
+        |Туристический рейтинг зарубежных стран
+    .forma
+        .forma_graph 
+            details 
+                summary.forma_graph__title
+                    |График
+                form
+                    p 
+                        |Значение ОХ:
+                        +radioButton("graph","tourists", graghVarX1)
+                        +radioButton("graph","tourists", graghVarX2) 
+                        +radioButton("graph","tourists", graghVarX3)   
+                    p 
+                        |Результаты 
+                        +checkbox("graph", "minhp", graghVarY1)
+                        +checkbox("graph", "heroesamount", graghVarY2)
+                        +checkbox("graph", "minmana", graghVarY3)                      
+                    p
+                        button.forma_graph__btn(type="button") Построить
+                        button.forma_graph__btn(type="reset") Сбросить настройки   
+
+        .forma_filtr 
+            details 
+                summary.forma_filtr__title 
+                    |Фильтр
+                form
+                    p
+                        +formInput('Страна', 'text')
+                        +formInput('Численность туристов', 'number', '100000', '999999999')
+                        +formInput('Безопасность', 'number', '0', '10')
+                        +formInput('Транспорт', 'number', '0', '10')
+                        +formInput('Доступность цен', 'number', '0', '10')
+                        +formInput('Уровень сервиса', 'number', '0', '10')
+                        +formInput('Число отелей', 'number', '0', '10')
+                    p
+                        input.forma_filtr__button(type="button", value="Найти")
+                        input.forma_filtr__button(type="reset", value="Сбросить фильтр")
+
+        .forma_sort
+            details 
+                summary.forma_filtr__sort Сортировка
+                form
+                    each level in [{ options: ['Страна', 'Численность туристов', 'Доступность цен', 'Транспорт', 'Безопасность', 'Итоговый индекс туристическая привлекательность', 'Туристическая инфраструктура', 'Уровень сервиса'], label: 'Первый уровень:' },{ options: ['Страна', 'Численность туристов', 'Доступность цен', 'Транспорт', 'Безопасность', 'Итоговый индекс туристическая привлекательность', 'Туристическая инфраструктура', 'Уровень сервиса'], label: 'Второй уровень:' },{ options: ['Страна', 'Численность туристов', 'Доступность цен', 'Транспорт', 'Безопасность', 'Итоговый индекс туристическая привлекательность', 'Туристическая инфраструктура', 'Уровень сервиса'], label: 'Третий уровень:' }]
+                        +sortLevel(level.label, level.options)
+                    p
+                        input.forma_sort__button(type="button", value="Сортировать")
+                        input.forma_sort__button(type="reset", value="Сбросить настройки")
+        
+        .list_table 
+            table.table( align="center" border="2" cellspacing="0" cellpadding="5px" style="margin:auto;")
+                thead 
+                    +tableHead(["Страна",
+                                "Численность туристов (за год)",
+                                "Число культурных объектов",
+                                "Доступность цен",
+                                "Транспорт",
+                                "Безопасность",
+                                "Итоговый индекс туристическая привлекательность",
+                                "Уровень сервиса",
+                                "Туристическая инфраструктура"])
+                
+                tbody 
+                    each country in infoCountries 
+                         +tableRow([country.name,
+                                    country.tourists,
+                                    country.culturalObjects,
+                                    country.priceAccessibility,
+                                    country.transport,
+                                    country.safety,
+                                    country.attractivenessIndex,
+                                    country.serviceLevel,
+                                    country.infrastructure])               
+                

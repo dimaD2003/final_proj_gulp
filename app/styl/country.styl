@@ -1,0 +1,56 @@
+@import const
+.content
+	margin: 15px
+.main_dscr
+	display: grid
+	grid-template-columns: 1fr 2fr
+	gap: $gap+15
+	margin: 20px 0px
+	margin-bottom: 60px
+
+.main_table
+	margin-bottom: 60px
+
+.main_dscr__img
+	img
+		width: 100%
+
+th
+	font-size: $fontSize
+	font-weight: 400
+
+.content_image
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr 1fr
+	grid-template-rows: 1fr
+	justify-items: center
+@media screen and (max-width: 900px)
+	.main_dscr
+		grid-template-columns: 1fr 
+		grid-template-rows: 1fr 1fr
+	.main_table
+		max-width: 100%;
+		overflow-x: auto;
+
+	table
+		width: 100%;
+		border-collapse: collapse;
+
+	th, td
+		padding: 8px;
+		border: 1px solid #ddd;
+		text-align: left;
+	.content_image
+		display: block
+	.content_image_item
+		display: block
+		margin: auto
+		width: 70%
+	.content_image_item
+		img
+			width: 100%
+
+@media screen and (max-width: 1570px)
+	.content_image
+		grid-template-columns: 1fr 1fr 
+		grid-template-rows: 1fr 1fr

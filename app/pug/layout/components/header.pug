@@ -1,0 +1,16 @@
+- var menuItems = ['Главная', 'О нас', 'Контакты', 'Инфо', 'Другое']
+header
+    .menu
+        .menu__logo
+            img(src="./img/favicon/planet-earth-geography-svgrepo-com.svg")
+            | ИнлайнТур
+        .menu__info
+            each c in menuItems
+                div
+                    if c == 'Инфо'
+                        a.menu__link(href="../../info.html") #{c}
+                    else if c == 'Главная'
+                        a.menu__link(href="../../index.html") #{c}
+                    else 
+                        a.menu__link(href="#") #{c}
+    hr

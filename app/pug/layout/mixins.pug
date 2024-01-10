@@ -1,0 +1,80 @@
+//- ===== info/graph
+
+mixin radioButton(name, value, text)
+    .radio_group
+        label.radio_label
+            input.radio_input(type="radio", name=name, value=value)
+            span.radio_text= text
+
+//- ===== info/graph
+mixin checkbox(name, value, text)
+    .checkbox_group
+        label.checkbox_label
+            input.checkbox_input(type="checkbox", name=name, value=value)
+            span.checkbox_text= text
+
+//- ===== info/filtr
+mixin formInput(labelText, inpType, Min,Max)
+    label.forma_filtr__label
+        | #{labelText}:
+        if (inpType == 'number' &&  Min == 0) 
+            |от
+            input.forma_filtr__input(type=inpType, min=Min, max=Max)
+            | до
+            input.forma_filtr__input(type=inpType, min=Min, max=Max)
+        else 
+            input.forma_filtr__input(type=inpType, min=Min, max=Max)
+    br 
+
+//- ===== info/sort
+mixin sortLevel(label, options)
+    p
+        strong= label
+        select.forma_sort__select(name=`sort-level-${label}`)
+            each option in options
+                option= option
+
+        select.forma_sort__select(name=`sort-direction-${label}`)
+            option По возрастанию
+            option По убыванию
+
+//- ===== info/table
+mixin tableHead (data)
+    tr 
+        each item in data 
+            th= item
+
+mixin tableRow (data)
+    tr
+        each item in data
+            td= item
+
+//- ===== country_1
+mixin tableRowCountry(label, value)
+    tr
+        th= label
+        td= value
+
+//- mixin imageBlock(n)
+//-     - var i=3
+//-     .content_image
+//-         while i<n
+//-             .content_image_item
+//-                 img(src=`..//../dist/img/Albaniya/1_${i}.jpg`, alt="", width="300")
+//-                 i=i+1
+mixin imageBlock(n)
+    - var i=3
+    .content_image
+        each i in [3, 4, 5, 6]
+            .content_image_item
+                img(src=`./img/Albaniya/1_${i}.jpg`, alt="", width="300")
+
+//- ===== top-item
+mixin createTopItem(imageSrc, title, link, description)
+    .contant_top__item
+        img.contant_top__image(src=imageSrc, alt="")
+        p.contant_top_item__title
+            strong
+                a(href=link).contant_top__link= title
+        .contant_top_item__dscr
+            p= description    

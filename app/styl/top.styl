@@ -1,0 +1,39 @@
+.contant_top
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-template-rows: 1fr
+	overflow: hidden
+	width: 90%
+	margin: auto
+	gap: $gap+10
+
+.contant_top__item
+	border-bottom: 15px solid rgba(163, 184, 254, 0.159)
+	border-radius: 20px
+	text-align: center
+	background-color: rgba(163, 184, 254, 0.241)
+	max-height: 500px
+	overflow: hidden
+	display: -webkit-box
+	-webkit-line-clamp: 19
+	-webkit-box-orient: vertical
+
+.contant_top__image
+	
+	margin: 20px auto
+	min-width: 80px
+	max-height: 50px
+	display: block
+	&:hover
+		background-color rgba(80, 33, 150, 0.534)
+		border-radius: 10px
+.contant_top_item__dscr
+	text-align: justify
+	padding: 0 20px
+
+@media (max-width: $mw)
+	.contant_top
+		display: block
+
+	.contant_top__item
+		margin: 10px $gap

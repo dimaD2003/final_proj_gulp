@@ -1,0 +1,20 @@
+block variables 
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon", href="./img/favicon/planet-earth-geography-svgrepo-com.svg", type="svg+xml")
+        link(rel="stylesheet", href="./css/main.css")
+        link(rel="stylesheet", href="./css/menu.css")
+        title My Travel Website
+    body(link="#000000", vlink="#000000")
+        .container
+            include components/header.pug
+            
+            block content
+                block partners 
+                    include components/contant_partners.pug
+
+            include components/footer.pug

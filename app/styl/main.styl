@@ -1,0 +1,75 @@
+@import const
+
+
+
+.container
+	font-family: 'Franklin Gothic Medium'
+	margin auto
+	width 80%
+	background: linear-gradient(-160deg, white,#a0abfb57)
+@import menu
+
+bgc_partners(size, src)
+	grid-column: unquote(size)
+	background-image: url(src)
+	background-size: 100% 100%
+	background-repeat: no-repeat
+   
+
+.contant_partners
+    
+	margin: 5px auto 15px
+	width: 80%
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	gap: 50px
+	
+   
+.contant_partners_item
+	width: 100%
+	height: 250px 
+	border: 2px solid rgb(0, 0, 0)
+	border-radius: 20px
+
+.contant
+	h3
+		text-align: center
+		font-size: 30px
+		letter-spacing: 10px
+
+
+.contant_partners_item:nth-child(1)
+	bgc_partners("1/2" , "../img/Partners/harris-interactive-inc-companies-photo-1.jpg")
+	background-size: 85% 85%
+	background-position: center
+	background-color #fff
+
+  
+.contant_partners_item:nth-child(2)
+	bgc_partners("2/3" , "../img/Partners/mountains-logo-vector-7477824.jpg")
+	background-size: 85% 85%
+	background-position: center
+	background-color #fff
+	
+
+.contant_partners_item:nth-child(3)
+	bgc_partners("3/4" , "../img/Partners/bde4dd6a033fa1f8def5b1845b5a9053_gallerySiteSize.png")
+	background-color #fff
+.contant_partners_item:nth-child(4)
+	bgc_partners("4/5" , "../img/Partners/hitwise-companies-photo-u1.jpg")    
+	background-color #fff
+@import top
+@import footer
+@import country
+@import info
+
+@media (max-width : $mw)
+	.container
+		width 650px
+
+	.contant_partners
+		display: block
+		width: 60%
+
+	.contant_partners_item
+		margin: $gap+10 0px
